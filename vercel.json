@@ -1,7 +1,16 @@
 {
-    "builds": [
-      { "src": "dist/*.js", "use": "@now/node" },
-      { "src": "public/**/*", "use": "@now/static" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+      {
+          "src": "dist/app.js",
+          "use": "@vercel/node",
+          "config": { "includeFiles": ["dist/**"] }
+      }
+  ],
+  "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "dist/index.js"
+      }
+  ]
+}
