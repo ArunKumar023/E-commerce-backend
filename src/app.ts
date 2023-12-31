@@ -19,8 +19,8 @@ config({
 });
 
 const port = process.env.PORT || 4000;
-const mongoURI = process.env.MONGO_URI || 'mongodb+srv://ak9097188:9097188@cluster0.viyslhu.mongodb.net/E-commerce?retryWrites=true&w=majority';
-const stripeKey = process.env.STRIPE_KEY || 'sk_test_51OSfdGSFby1ZUSN4LDNx2Tyy0KuUzC9c8UsubX4ulOGA7VtzB8ri5c7wBnWc7kyPzjcL8IAJq8fqOwRgEVqhQahg003bMu6uKz';
+const mongoURI = process.env.MONGO_URI || '';
+const stripeKey = process.env.STRIPE_KEY || '';
    
 connectDB(mongoURI);
 
